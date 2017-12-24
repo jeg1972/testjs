@@ -3,8 +3,7 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket s3://palindrome-code
-                                   --output-template-file NewSamTemplate.yaml
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket palindrome-code --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
   files:
